@@ -1,0 +1,35 @@
+{
+  "name": "softonic/storage_api_sdk",
+  "type": "softonic-instance",
+  "description": "Storage API SDK",
+  "keywords": [
+    "storage",
+    "api",
+    "sdk"
+  ],
+  "version": "1.0.4",
+  "homepage": "http://storage.priv.sftapi.com",
+  "repositories": [
+    {
+      "packagist": false
+    },
+    {
+      "type": "composer",
+      "url": "http://satis.redtonic/softonic"
+    },
+    {
+      "type": "composer",
+      "url": "http://satis.redtonic/packagist"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Softonic\\StorageApiInstance\\": "src/Softonic/StorageApiInstance"
+    }
+  },
+  "require": {
+    "php": "5.3.*",
+    "ext-curl": "*"
+  },
+  "minimum-stability": "stable"
+}
