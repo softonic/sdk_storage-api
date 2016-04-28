@@ -271,10 +271,7 @@ class UploadRequest implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array("queued", "fetching", "fetched", "uploading", "uploaded", "error", "partial_error");
-        if (!in_array($status, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'queued', 'fetching', 'fetched', 'uploading', 'uploaded', 'error', 'partial_error'");
-        }
+        
         $this->status = $status;
         return $this;
     }
@@ -358,10 +355,7 @@ class UploadRequest implements ArrayAccess
      */
     public function setFileType($file_type)
     {
-        $allowed_values = array("program", "program_add_new_cdn", "program_staging", "program_integration", "program_development", "images", "images_staging", "images_integration", "images_development", "rpm", "report");
-        if (!in_array($file_type, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'file_type', must be one of 'program', 'program_add_new_cdn', 'program_staging', 'program_integration', 'program_development', 'images', 'images_staging', 'images_integration', 'images_development', 'rpm', 'report'");
-        }
+        
         $this->file_type = $file_type;
         return $this;
     }

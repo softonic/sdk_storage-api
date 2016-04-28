@@ -64,7 +64,7 @@ class UploadRequestsApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('http://v1.storage.priv.sftapi.com');
+            $apiClient->getConfig()->setHost('http://v1.storage.priv.sftapi.com.dev');
         }
   
         $this->apiClient = $apiClient;
