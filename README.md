@@ -20,14 +20,8 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
 
 ```
 {
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/softonic/storage_api_sdk.git"
-    }
-  ],
   "require": {
-    "softonic/storage_api_sdk": "*@dev"
+    "softonic/storage_api_sdk": "2.0.86"
   }
 }
 ```
