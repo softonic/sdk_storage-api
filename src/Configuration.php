@@ -96,7 +96,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'http://v1.virus-total.priv.sftapi.com.dev';
+    protected $host = 'http://v1.storage.priv.sftapi.com';
 
     /**
      * Timeout (second) of the HTTP request, by default set to 0, no timeout
@@ -110,7 +110,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = "Swagger-Codegen/2.0.86-86/php";
+    protected $userAgent = "Swagger-Codegen/2.0.86/php";
 
     /**
      * Debug switch (default set to false)
@@ -516,8 +516,8 @@ class Configuration
         $report  = "PHP SDK (Softonic\StorageApiSdk) Debug Report:\n";
         $report .= "    OS: ".php_uname()."\n";
         $report .= "    PHP Version: ".phpversion()."\n";
-        $report .= "    OpenAPI Spec Version: dev\n";
-        $report .= "    SDK Package Version: 2.0.86-86\n";
+        $report .= "    OpenAPI Spec Version: v2.0.86-86\n";
+        $report .= "    SDK Package Version: 2.0.86\n";
         $report .= "    Temp Folder Path: ".self::getDefaultConfiguration()->getTempFolderPath()."\n";
 
         return $report;
