@@ -38,7 +38,7 @@ use \ArrayAccess;
  * File Class Doc Comment
  *
  * @category    Class
- * @description
+ * @description 
  * @package     Softonic\StorageApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -47,7 +47,7 @@ use \ArrayAccess;
 class File implements ArrayAccess
 {
     /**
-      * Array of property to type mappings. Used for (de)serialization
+      * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
@@ -56,14 +56,14 @@ class File implements ArrayAccess
         'filename' => 'string',
         'size' => 'int'
     );
-
+  
     static function swaggerTypes() {
         return self::$swaggerTypes;
     }
 
-    /**
+    /** 
       * Array of attributes where the key is the local name, and the value is the original name
-      * @var string[]
+      * @var string[] 
       */
     static $attributeMap = array(
         'id_files' => 'id_files',
@@ -71,7 +71,7 @@ class File implements ArrayAccess
         'filename' => 'filename',
         'size' => 'size'
     );
-
+  
     static function attributeMap() {
         return self::$attributeMap;
     }
@@ -86,7 +86,7 @@ class File implements ArrayAccess
         'filename' => 'setFilename',
         'size' => 'setSize'
     );
-
+  
     static function setters() {
         return self::$setters;
     }
@@ -101,36 +101,36 @@ class File implements ArrayAccess
         'filename' => 'getFilename',
         'size' => 'getSize'
     );
-
+  
     static function getters() {
         return self::$getters;
     }
 
-
+    
     /**
       * $id_files SHA-1 hash of the file
       * @var string
       */
     protected $id_files;
-
+    
     /**
       * $sha256_hash SHA-256 hash of the file
       * @var string
       */
     protected $sha256_hash;
-
+    
     /**
       * $filename Name of the file
       * @var string
       */
     protected $filename;
-
+    
     /**
       * $size Size of the file
       * @var int
       */
     protected $size;
-
+    
 
     /**
      * Constructor
@@ -138,7 +138,7 @@ class File implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-
+        
         if ($data != null) {
             $this->id_files = $data["id_files"];
             $this->sha256_hash = $data["sha256_hash"];
@@ -146,7 +146,7 @@ class File implements ArrayAccess
             $this->size = $data["size"];
         }
     }
-
+    
     /**
      * Gets id_files
      * @return string
@@ -155,7 +155,7 @@ class File implements ArrayAccess
     {
         return $this->id_files;
     }
-
+  
     /**
      * Sets id_files
      * @param string $id_files SHA-1 hash of the file
@@ -163,11 +163,11 @@ class File implements ArrayAccess
      */
     public function setIdFiles($id_files)
     {
-
+        
         $this->id_files = $id_files;
         return $this;
     }
-
+    
     /**
      * Gets sha256_hash
      * @return string
@@ -176,7 +176,7 @@ class File implements ArrayAccess
     {
         return $this->sha256_hash;
     }
-
+  
     /**
      * Sets sha256_hash
      * @param string $sha256_hash SHA-256 hash of the file
@@ -184,11 +184,11 @@ class File implements ArrayAccess
      */
     public function setSha256Hash($sha256_hash)
     {
-
+        
         $this->sha256_hash = $sha256_hash;
         return $this;
     }
-
+    
     /**
      * Gets filename
      * @return string
@@ -197,7 +197,7 @@ class File implements ArrayAccess
     {
         return $this->filename;
     }
-
+  
     /**
      * Sets filename
      * @param string $filename Name of the file
@@ -205,11 +205,11 @@ class File implements ArrayAccess
      */
     public function setFilename($filename)
     {
-
+        
         $this->filename = $filename;
         return $this;
     }
-
+    
     /**
      * Gets size
      * @return int
@@ -218,7 +218,7 @@ class File implements ArrayAccess
     {
         return $this->size;
     }
-
+  
     /**
      * Sets size
      * @param int $size Size of the file
@@ -226,34 +226,34 @@ class File implements ArrayAccess
      */
     public function setSize($size)
     {
-
+        
         $this->size = $size;
         return $this;
     }
-
+    
     /**
      * Returns true if offset exists. False otherwise.
-     * @param  integer $offset Offset
+     * @param  integer $offset Offset 
      * @return boolean
      */
     public function offsetExists($offset)
     {
         return isset($this->$offset);
     }
-
+  
     /**
      * Gets offset.
-     * @param  integer $offset Offset
-     * @return mixed
+     * @param  integer $offset Offset 
+     * @return mixed 
      */
     public function offsetGet($offset)
     {
         return $this->$offset;
     }
-
+  
     /**
      * Sets value based on offset.
-     * @param  integer $offset Offset
+     * @param  integer $offset Offset 
      * @param  mixed   $value  Value to be set
      * @return void
      */
@@ -261,17 +261,17 @@ class File implements ArrayAccess
     {
         $this->$offset = $value;
     }
-
+  
     /**
      * Unsets offset.
-     * @param  integer $offset Offset
+     * @param  integer $offset Offset 
      * @return void
      */
     public function offsetUnset($offset)
     {
         unset($this->$offset);
     }
-
+  
     /**
      * Gets the string presentation of the object
      * @return string

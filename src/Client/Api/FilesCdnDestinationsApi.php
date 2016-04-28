@@ -64,7 +64,7 @@ class FilesCdnDestinationsApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('http://v1.storage.priv.sftapi.com.dev');
+            $apiClient->getConfig()->setHost('http://v1.storage.priv.sftapi.com');
         }
   
         $this->apiClient = $apiClient;
