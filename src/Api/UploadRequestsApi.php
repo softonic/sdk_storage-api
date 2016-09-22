@@ -108,7 +108,7 @@ class UploadRequestsApi
      * Creates a new UploadRequest
      *
      * @param \Softonic\StorageApiSdk\Model\UploadRequest $body  (optional)
-     * @return void
+     * @return \Softonic\StorageApiSdk\Model\UploadRequest
      * @throws \Softonic\StorageApiSdk\ApiException on non-2xx response
      */
     public function createUploadRequest($body = null)
@@ -123,7 +123,7 @@ class UploadRequestsApi
      * Creates a new UploadRequest
      *
      * @param \Softonic\StorageApiSdk\Model\UploadRequest $body  (optional)
-     * @return Array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \Softonic\StorageApiSdk\Model\UploadRequest, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\StorageApiSdk\ApiException on non-2xx response
      */
     public function createUploadRequestWithHttpInfo($body = null)
@@ -183,7 +183,7 @@ class UploadRequestsApi
                 '/upload-requests'
             );
 
-            return array(null, $statusCode, $httpHeader);
+            return array($response, $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }
