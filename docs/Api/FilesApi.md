@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **readFile**
-> \Softonic\StorageApiSdk\Model\File readFile($id_files)
+> \Softonic\StorageApiSdk\Client\Model\File readFile($id_files)
 
 Fetches a single File
 
@@ -20,19 +20,24 @@ Fetches a single File
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: storage_api_access_code
-Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: storage_api_application
-Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: storage_api_implicit
-Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: storage_api_password
-Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\StorageApiSdk\Api\FilesApi();
+$apiInstance = new Softonic\StorageApiSdk\Api\FilesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_files = "id_files_example"; // string | SHA-1 hash of the file
 
 try {
-    $result = $api_instance->readFile($id_files);
+    $result = $apiInstance->readFile($id_files);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FilesApi->readFile: ', $e->getMessage(), PHP_EOL;
@@ -48,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\StorageApiSdk\Model\File**](../Model/File.md)
+[**\Softonic\StorageApiSdk\Client\Model\File**](../Model/File.md)
 
 ### Authorization
 

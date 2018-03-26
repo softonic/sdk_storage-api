@@ -21,20 +21,25 @@ Deletes a FileCdnDestination
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: storage_api_access_code
-Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: storage_api_application
-Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: storage_api_implicit
-Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: storage_api_password
-Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\StorageApiSdk\Api\FilesCdnDestinationsApi();
+$apiInstance = new Softonic\StorageApiSdk\Api\FilesCdnDestinationsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_files = "id_files_example"; // string | SHA-1 hash of the file
 $id_cdn_destinations = "id_cdn_destinations_example"; // string | CDN destination where the file is uploaded
 
 try {
-    $api_instance->deleteFileCdnDestination($id_files, $id_cdn_destinations);
+    $apiInstance->deleteFileCdnDestination($id_files, $id_cdn_destinations);
 } catch (Exception $e) {
     echo 'Exception when calling FilesCdnDestinationsApi->deleteFileCdnDestination: ', $e->getMessage(), PHP_EOL;
 }
@@ -64,7 +69,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findFileCdnDestination**
-> \Softonic\StorageApiSdk\Model\FileCdnDestination[] findFileCdnDestination($id_files)
+> \Softonic\StorageApiSdk\Client\Model\FileCdnDestination[] findFileCdnDestination($id_files)
 
 List of FileCdnDestinations
 
@@ -76,19 +81,24 @@ List of FileCdnDestinations
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: storage_api_access_code
-Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: storage_api_application
-Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: storage_api_implicit
-Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: storage_api_password
-Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\StorageApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\StorageApiSdk\Api\FilesCdnDestinationsApi();
+$apiInstance = new Softonic\StorageApiSdk\Api\FilesCdnDestinationsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_files = "id_files_example"; // string | SHA-1 hash of the file
 
 try {
-    $result = $api_instance->findFileCdnDestination($id_files);
+    $result = $apiInstance->findFileCdnDestination($id_files);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FilesCdnDestinationsApi->findFileCdnDestination: ', $e->getMessage(), PHP_EOL;
@@ -104,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\StorageApiSdk\Model\FileCdnDestination[]**](../Model/FileCdnDestination.md)
+[**\Softonic\StorageApiSdk\Client\Model\FileCdnDestination[]**](../Model/FileCdnDestination.md)
 
 ### Authorization
 
