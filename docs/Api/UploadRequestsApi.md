@@ -1,6 +1,6 @@
 # Softonic\StorageApiSdk\UploadRequestsApi
 
-All URIs are relative to *https://storage.sftapi.com*
+All URIs are relative to *http://storage-v2.eu-west.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
