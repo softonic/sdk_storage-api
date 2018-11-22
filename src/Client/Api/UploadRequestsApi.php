@@ -95,7 +95,8 @@ class UploadRequestsApi
      */
     public function createUploadRequest($body = null)
     {
-        $this->createUploadRequestWithHttpInfo($body);
+        list($response) = $this->createUploadRequestWithHttpInfo($body);
+        return $response;
     }
 
     /**
@@ -142,7 +143,7 @@ class UploadRequestsApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            return [json_decode($response->getBody()->getContents(), true), $statusCode, $response->getHeaders()];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
